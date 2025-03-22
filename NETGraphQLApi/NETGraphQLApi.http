@@ -1,0 +1,6 @@
+@NETGraphQLApi_HostAddress = http://localhost:5198
+
+GET {{NETGraphQLApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
