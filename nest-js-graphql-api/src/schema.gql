@@ -1,0 +1,25 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Book {
+  id: ID!
+  title: String!
+  author: String!
+}
+
+type Product {
+  id: ID!
+  title: String!
+  price: Float!
+}
+
+type Query {
+  books: [Book!]!
+  products: [Product!]!
+}
+
+type Mutation {
+  addBook(title: String!, author: String!): Book!
+  addProduct(title: String!, price: Float!): Product!
+}
