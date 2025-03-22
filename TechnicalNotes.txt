@@ -1,0 +1,38 @@
+# Core Terminologies #
+Queries: 
+    - Queries are used to fetch data from the server.
+    - They allow clients to request exactly the data they need and nothing more
+    - For example, a query might ask for a user's profile details along with their recent posts
+Mutations:
+    - Mutations are used to modift server-side data
+    - They handle operations like creating, updating, or deleting records
+    - Like queries, mutations let you specify exactly what data should be returned after an operation
+    completes, providing immediate feedback about the state of the data
+Subscriptions:
+    - Subscriptions allow clients to subscribe to real-time data updates
+    - When data changes, the server pushes updates to the subscribed clients
+    - This is especially useful for applications like chat apps or live feeds where real-time data is 
+    critical
+
+
+# Basic GraphQL Concepts & Schema Design #
+o Defining Types, Queries, Mutations and Resolvers
+    - Types
+        - GraphQL uses a type system to define the shep of data
+            - Scalar Types: Basic types such as String, Int, Float, Boolean and ID
+            - Object Types: Custom types that represent entities in your application (Book or User etc)
+    - Queries
+        - Queries are used to retrive data
+        - They specify exactly what fields the client needs, and the server responds with a matching
+        data structure
+            - Example: A "books" query to retrieve a list of books
+    - Mutations
+        - Mutations modify server-side data
+        - They also return data about the operation performed
+            - Example: An "addBook" mutation to create a new book entry
+    - Resolvers
+        - Resolvers are functions that implement the logic behind each field in a GraphQL
+        - When a client sends a query or mutation, the resolvers are responsible for fetching or modifying
+        the corresponding data
+            - Each field in your schema maps to a resolver, which allows for flexible data fetching and business
+            logic separation
